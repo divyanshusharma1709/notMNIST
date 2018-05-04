@@ -30,25 +30,15 @@ imlistH = []
 imlistI = []
 imlistJ = []
 
-featuresA = []
 labelA = []
-featuresB = []
 labelB = []
-featuresC = []
 labelC = []
-featuresD = []
 labelD = []
-featuresE = []
 labelE = []
-featuresF = []
 labelF = []
-featuresG = []
 labelG = []
-featuresH = []
 labelH = []
-featuresI = []
 labelI = []
-featuresJ = []
 labelJ = []
 
 imageA = []
@@ -61,80 +51,68 @@ imageG = []
 imageH = []
 imageI = []
 imageJ = []
+from skimage.feature import hog
+from skimage import data, color, exposure
 for i in range(len(arrA)):
     if(arrA[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/A/" + arrA[i])
-       imlistA.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageA.append(imlistA[i][x][y])
-    featuresA.append(imageA)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistA.append(df)
 for q in range(len(arrA)):
     labelA.append('A')
     
 for i in range(len(arrB)):
     if(arrB[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/B/" + arrB[i])
-       imlistB.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageB.append(imlistB[i][x][y])
-    featuresB.append(imageB)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistB.append(df)
 for q in range(len(arrB)):
     labelB.append('B')
 
 for i in range(len(arrC)):
     if(arrC[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/C/" + arrC[i])
-       imlistC.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageC.append(imlistB[i][x][y])
-    featuresC.append(imageC)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistC.append(df)
 for q in range(len(arrC)):
     labelC.append('C')
     
 for i in range(len(arrD)):
     if(arrD[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/D/" + arrD[i])
-       imlistD.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageD.append(imlistD[i][x][y])
-    featuresD.append(imageD)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistD.append(df)
 for q in range(len(arrD)):
     labelD.append('D')
     
 for i in range(len(arrE)):
     if(arrE[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/E/" + arrE[i])
-       imlistE.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageE.append(imlistE[i][x][y])
-    featuresE.append(imageE)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistE.append(df)
 for q in range(len(arrE)):
     labelE.append('E')
 
 for i in range(len(arrF)):
     if(arrF[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/F/" + arrF[i])
-       imlistF.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageF.append(imlistF[i][x][y])
-    featuresF.append(imageF)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistF.append(df)
 for q in range(len(arrF)):
     labelF.append('F')
 
 for i in range(len(arrG)):
     if(arrG[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/G/" + arrG[i])
-       imlistG.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageG.append(imlistG[i][x][y])
-    featuresG.append(imageG)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistG.append(df)
 
 for q in range(len(arrG)):
     labelG.append('G')
@@ -142,11 +120,9 @@ for q in range(len(arrG)):
 for i in range(len(arrH)):
     if(arrH[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/H/" + arrH[i])
-       imlistH.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageH.append(imlistH[i][x][y])
-    featuresH.append(imageH)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistH.append(df)
 
 for q in range(len(arrH)):
     labelH.append('H')
@@ -154,11 +130,9 @@ for q in range(len(arrH)):
 for i in range(len(arrI)):
     if(arrI[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/I/" + arrI[i])
-       imlistI.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageI.append(imlistI[i][x][y])
-    featuresI.append(imageI)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistI.append(df)
 
 for q in range(len(arrI)):
     labelI.append('I')
@@ -166,15 +140,13 @@ for q in range(len(arrI)):
 for i in range(len(arrJ)):
     if(arrJ[i] != 'notMNIST.py'):
        im = imread("/home/divyanshu/Desktop/notMNIST_small/J/" + arrJ[i])
-       imlistJ.append(im)
-    for x in range(28):
-        for y in range(28):
-            imageJ.append(imlistJ[i][x][y])
-    featuresJ.append(imageJ)
+       im = color.rgb2gray(im)
+       df= hog(im)
+       imlistJ.append(df)
 for q in range(len(arrJ)):
     labelJ.append('J')
             
-features = featuresA + featuresB + featuresC + featuresD + featuresE + featuresF + featuresG + featuresH + featuresI + featuresJ
+features = imlistA + imlistB + imlistC + imlistD + imlistE + imlistF + imlistG + imlistH + imlistI + imlistJ
 labels = labelA + labelB + labelC + labelD + labelE + labelF + labelG + labelH + labelI + labelJ
 dataset = {"features": features, "labels": labels}
 import pickle

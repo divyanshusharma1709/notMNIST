@@ -1,0 +1,3 @@
+Test Set Score (K-Nearest Neighbors): 0.7780348878604486
+Cross Validation Score on Test Set: 0.7779473483403282
+Score on Training Set: 0.8678621391326465
